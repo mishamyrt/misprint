@@ -35,7 +35,7 @@ Misprint avaliable as ES Module, so you can install from npm and use it with any
 npm install misprint
 ```
 
-Or even with browser from CDN. Do not use it in production because of low performance.
+Or even with browser from CDN in [supported browsers](https://caniuse.com/#feat=es6-module).
 
 ```html
 <script type="module" src="https://cdn.jsdelivr.net/npm/misprint/index.js'"></script>
