@@ -1,0 +1,24 @@
+{
+  "name": "misprint",
+  "version": "1.0.0",
+  "description": "The tiny library that lets you quickly add a typo handler to your site",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mishamyrt/misprint.git"
+  },
+  "keywords": [
+    "typo",
+    "misprint",
+    "email"
+  ],
+  "author": "mishamyrt",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mishamyrt/misprint/issues"
+  },
+  "homepage": "https://github.com/mishamyrt/misprint#readme"
+}
