@@ -66,7 +66,8 @@ const ctrlU = e => (e.ctrlKey || e.metaKey) && e.keyCode === 85
 bindTypoHandler(
     'misha@myrt.co',
     'Typo on your website',
-    messageFormatter
+    messageFormatter,
+    ctrlU
 )
 ```
 
