@@ -9,7 +9,7 @@ The tiny library that lets you quickly add a typo handler to your site.
 ## Install
 
 ```sh
-npm install 
+npm install misprint
 ```
 
 ```js
