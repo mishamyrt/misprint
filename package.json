@@ -2,7 +2,8 @@
   "name": "misprint",
   "version": "1.0.0",
   "description": "The tiny library that lets you quickly add a typo handler to your site",
-  "main": "src/index.js",
+  "main": "index.js",
+  "type": "module",
   "scripts": {
     "test-size": "npx size-limit",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -28,7 +29,7 @@
   },
   "size-limit": [
     {
-      "path": "src/*.js",
+      "path": "index.js",
       "limit": "279 B"
     }
   ]
