@@ -4,6 +4,7 @@
   "description": "The tiny library that lets you quickly add a typo handler to your site",
   "main": "src/index.js",
   "scripts": {
+    "test-size": "npx size-limit",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,5 +21,15 @@
   "bugs": {
     "url": "https://github.com/mishamyrt/misprint/issues"
   },
-  "homepage": "https://github.com/mishamyrt/misprint#readme"
+  "homepage": "https://github.com/mishamyrt/misprint#readme",
+  "devDependencies": {
+    "@size-limit/preset-small-lib": "^4.0.1",
+    "size-limit": "^4.0.1"
+  },
+  "size-limit": [
+    {
+      "path": "src/*.js",
+      "limit": "279 B"
+    }
+  ]
 }
