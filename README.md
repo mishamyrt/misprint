@@ -70,3 +70,7 @@ bindTypoHandler(
 ```
 
 If you want to assign ctrl+* keystroke, dont forget to check `e.metaKey`. It's command (⌘) key in macOS. 
+
+## Formatters
+
+There is a [document](./formatters.md) with examples of message formatting in different languages.
