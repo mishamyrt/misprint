@@ -1,12 +1,13 @@
 {
   "name": "misprint",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The tiny library that lets you quickly add a typo handler to your site",
   "main": "index.js",
   "type": "module",
   "scripts": {
     "test-size": "npx size-limit",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "publish": "npx clean-publish --files assets/logo.png"
   },
   "repository": {
     "type": "git",
