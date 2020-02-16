@@ -36,9 +36,8 @@ npm install misprint
 Or even with browser from CDN in [supported browsers](https://caniuse.com/#feat=es6-module).
 
 ```html
-<script type="module" src="https://cdn.jsdelivr.net/npm/misprint/index.js'"></script>
 <script type="module">
-  import { bindTypoHandler } from misprint
+  import { bindTypoHandler } from 'https://cdn.jsdelivr.net/npm/misprint/index.js'
 </script>
 ```
 
