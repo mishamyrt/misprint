@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning][].
 
 -   Formatters to documentation.
 
+### Changed
+
+-   Replace custom transformation with `encodeURI` (-12 bytes)
+
 ## 1.0.0 — 2020-02-15
 
 Initial release.

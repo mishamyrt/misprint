@@ -1,11 +1,5 @@
 /** @module Misprint */
 
-/** URL encoded CR LF. */
-const lineBreakChar = "%0D%0A"
-
-/** Regular expression for line breaks. */
-const lineBreakRegexp = /(\r\n|\n|\r)/gm
-
 /**
  * Open mail composing in default mail client
  * @param {string} to - A mail Recipient
@@ -18,13 +12,6 @@ const mailTo = (to, subject, message) => {
   a.href = `mailto:${to}?subject=${subject}&body=${message}`
   a.click()
 }
-
-/**
- * Replaces all line breaks with URL encoded version
- * @param {string} str - A string to be processed
- * @returns {string} 
- */
-const toUrlMultiline = str => str.replace(lineBreakRegexp, lineBreakChar)
 
 /**
  * Predicate to test key input
@@ -53,19 +40,18 @@ const ctrlEnter = e => (e.ctrlKey || e.metaKey) && e.keyCode === 13
  * @returns {void}
  */
 function bindTypoHandler(to, subject, formatter, keyPredicate = ctrlEnter) {
-  document.addEventListener('keydown', function (e) {
-    if (keyPredicate(e)) {
-      e.preventDefault()
-      const selection = window.getSelection()
-      const text = selection.toString()
-      if (text.length === 0) {
-        return
-      }
-      const paragraph = selection.anchorNode.parentNode.textContent
-      const url = window.location.href
-      const message = toUrlMultiline(formatter(url, text, paragraph))
-      mailTo(to, subject, message)
+  document.addEventListener('keydown', (e) => {
+    if (!keyPredicate(e)) return
+    e.preventDefault()
+    const selection = window.getSelection()
+    const text = selection.toString()
+    if (text.length === 0) {
+      return
     }
+    const paragraph = selection.anchorNode.parentNode.textContent
+    const url = window.location.href
+    const message = encodeURI(formatter(url, text, paragraph))
+    mailTo(to, subject, message)
   })
 }
 
