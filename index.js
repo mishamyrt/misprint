@@ -55,6 +55,7 @@ const ctrlEnter = e => (e.ctrlKey || e.metaKey) && e.keyCode === 13
 function bindTypoHandler(to, subject, formatter, keyPredicate = ctrlEnter) {
   document.addEventListener('keydown', function (e) {
     if (keyPredicate(e)) {
+      e.preventDefault()
       const selection = window.getSelection()
       const text = selection.toString()
       if (text.length === 0) {
