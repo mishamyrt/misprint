@@ -58,7 +58,7 @@ const ctrlEnter = e => (e.ctrlKey || e.metaKey) && e.keyCode === 13
 If you want to assign other keystroke, pass custom predicate to function.
 
 ```js
-const ctrlU = e => (e.ctrlKey || e.metaKey) && e.keyCode === 85
+const altU = e => e.altKey && e.keyCode === 85
 
 bindTypoHandler(
     'misha@myrt.co',
