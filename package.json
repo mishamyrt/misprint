@@ -25,8 +25,8 @@
   },
   "homepage": "https://github.com/mishamyrt/misprint#readme",
   "devDependencies": {
-    "@size-limit/preset-small-lib": "^4.0.1",
-    "size-limit": "^4.0.1"
+    "@size-limit/preset-small-lib": "^4.5.0",
+    "size-limit": "^4.5.0"
   },
   "size-limit": [
     {
