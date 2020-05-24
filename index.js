@@ -39,20 +39,25 @@ const ctrlEnter = e => (e.ctrlKey || e.metaKey) && e.keyCode === 13
  * @param {KeyPredicate} [keyPredicate=ctrlEnter] - A predicate keys
  * @returns {void}
  */
-function bindTypoHandler(to, subject, formatter, keyPredicate = ctrlEnter) {
-  document.addEventListener('keydown', (e) => {
+const bindTypoHandler = (
+  to,
+  subject,
+  formatter,
+  keyPredicate = ctrlEnter
+) => document.addEventListener('keydown', e => {
+    // Early exit if not our keys is pressed
     if (!keyPredicate(e)) return
     e.preventDefault()
+
+    // Exit if no selection
     const selection = window.getSelection()
     const text = selection.toString()
-    if (text.length === 0) {
-      return
-    }
-    const paragraph = selection.anchorNode.parentNode.textContent
-    const url = window.location.href
-    const message = encodeURI(formatter(url, text, paragraph))
-    mailTo(to, subject, message)
+    if (text.length === 0) return
+
+    mailTo(to, subject, encodeURI(formatter(
+      window.location.href,
+      text,
+      selection.anchorNode.parentNode.textContent)))
   })
-}
 
 export { bindTypoHandler } 
