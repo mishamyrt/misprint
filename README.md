@@ -4,7 +4,7 @@
 
 Misprint — simple and tiny library, that lets you quickly add a typo notifyer to your site.
 
-* 279 bytes (minified and gzipped). It uses [Size Limit](https://github.com/ai/size-limit) to control size.
+* 255 bytes (minified and gzipped). It uses [Size Limit](https://github.com/ai/size-limit) to control size.
 * Only one exported function.
 * Reassignable keystroke.
 * Full control of the message.
