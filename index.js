@@ -1,6 +1,16 @@
 /** @module Misprint */
 
 /**
+ * Message formatter
+ * @name MessageFormatter
+ * @function
+ * @param {string} url - An URL of page, where typo has been detected
+ * @param {string} text - A text, that user is selected
+ * @param {string} paragraph - A whole paragraph containing typo
+ * @returns {string} formatted message
+*/
+
+/**
  * Open mail composing in default mail client
  * @param {string} to - A mail Recipient
  * @param {string} subject - A mail subject
@@ -20,16 +30,6 @@ const mailTo = (to, subject, message) => {
  * @returns {boolean} 
  */
 const ctrlEnter = e => (e.ctrlKey || e.metaKey) && e.keyCode === 13
-
-/**
- * Message formatter
- * @name MessageFormatter
- * @function
- * @param {string} url - An URL of page, where typo has been detected
- * @param {string} text - A text, that user is selected
- * @param {string} paragraph - A whole paragraph containing typo
- * @returns {string} formatted message
-*/
 
 /**
  * Bind typo detect handler to mail
