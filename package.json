@@ -25,12 +25,12 @@
   },
   "homepage": "https://github.com/mishamyrt/misprint#readme",
   "devDependencies": {
-    "@size-limit/preset-small-lib": "^4.5.0",
-    "size-limit": "^4.5.0"
+    "@size-limit/preset-small-lib": "^4.11.0",
+    "size-limit": "^4.11.0"
   },
   "size-limit": [
     {
-      "path": "index.js",
+      "path": "src/index.js",
       "limit": "255 B"
     }
   ]
