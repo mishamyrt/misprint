@@ -1,14 +1,5 @@
+// @ts-check
 /** @module Misprint */
-
-/**
- * Message formatter
- * @name MessageFormatter
- * @function
- * @param {string} url - An URL of page, where typo has been detected
- * @param {string} text - A text, that user is selected
- * @param {string} paragraph - A whole paragraph containing typo
- * @returns {string} formatted message
-*/
 
 /**
  * Open mail composing in default mail client
